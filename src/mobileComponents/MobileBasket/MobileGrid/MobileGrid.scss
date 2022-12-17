@@ -1,0 +1,127 @@
+
+.mobile__grid__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    position: relative;
+    border-bottom: 1px solid #878787;
+}
+
+.mobile__grid__img__bulik{
+    height: 240px;
+    width: 240px;
+    margin-right: 60px;
+    object-fit: cover;
+}
+
+.mobile__description__container{
+    width: 30%;
+}
+.mobile__description__name{
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.mobile__description__count{
+    font-weight: normal;
+    font-size: 16px;
+    color:#FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.mobile__description__size{
+    font-weight: normal;
+    font-size: 16px;
+    color:#FFFFFF;
+    display: flex;
+    margin-bottom: 15px;
+}
+.mobileGrid__name__description-size-text {
+    margin-top: 9px;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
+.mobile__description__price{
+color: white;
+    font-weight: bold;
+    margin-top: 0;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-top: 47px;
+
+}
+.mobile__description__previos-price{
+    color: #878787;
+    font-weight: bold;
+    font-size: 16px;
+}
+.mobile__grid__img__cross{
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin-top: 0;
+    right: 17px;
+}
+
+.mobile__grid__line{
+    border: 1px solid #878787;
+    width: 85%;
+}
+.mobile__description__inputCount {
+    height: 24px;
+    width: 17%;
+    margin-left: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.mobile__grid__img__ramil{
+    width: 240px;
+    height: 240px;
+    margin-right: 60px;
+    object-fit: cover;
+}
+
+@media screen  and(max-width: 500px){
+    .mobile__grid__img__bulik{
+        height: 180px;
+        width: 180px;
+        margin-right: 60px;
+        object-fit: cover;
+    }       
+    
+    .mobile__grid__img__ramil{
+        width: 180px;
+        height: 180px;
+        margin-right: 60px;
+        object-fit: cover;
+    }
+}
+
+@media screen  and(max-width: 415px){
+    .mobile__grid__img__bulik{
+        height: 180px;
+        width: 180px;
+        margin-right: 30px;
+        object-fit: cover;
+    }       
+    
+    .mobile__grid__img__ramil{
+        width: 180px;
+        height: 180px;
+        margin-right: 30px;
+        object-fit: cover;
+    }
+
+    .mobile__description__container{
+        width: 35%;
+    }
+}

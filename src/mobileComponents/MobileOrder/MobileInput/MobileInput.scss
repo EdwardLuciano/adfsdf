@@ -1,0 +1,80 @@
+
+.input__order__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__order-title{
+    font-weight: bold;  
+    font-size: 16px;
+    color: white;
+}
+
+.input__order-city{
+    border-radius: 8px;
+    height: 54px;
+    width: 80%;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+.input__order-street{
+    border-radius: 8px;
+    height: 54px;
+    width: 80%;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.input__order__house__flat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__order-house{
+    width: 37%;
+    height: 54px;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding-left: 15px;
+}
+
+.input__order-flat{
+    width: 37%;
+    height: 54px;
+    border-radius: 8px;
+    padding-left: 15px;
+}
+
+.input__order-delivery{
+    color:#FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+.select__order-delivery{
+    width: 83%;
+    height: 60px;
+    font-size: 24px;
+}
+
+.option-1{
+    color:#000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.option-2{
+    color:#000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+#saferoute-cart-widget.safeRouteMobile {
+    margin: 30px auto!important;
+    width: 90%;
+}
+

@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+input {
+    // padding-left: 40px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    border: 0;
+}
+
+.container > .go-to-catalog {
+    display: none;
+}

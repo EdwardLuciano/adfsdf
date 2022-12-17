@@ -1,0 +1,311 @@
+.fill {
+position: absolute;
+width: 1440px;
+height: 5352px;
+left: 0px;
+top: 0px;
+
+background: #BA7000;
+mix-blend-mode: multiply;
+}
+.texture {
+width: 2070px;
+height: 1440px;
+
+background: url(assets/images/texture.png);
+mix-blend-mode: difference;
+transform: rotate(-90deg);
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+@font-face {
+	font-family: AkzidGroCYBolExt;
+	src: url("assets/AkzidGroCYBolExt.otf") format("opentype");
+}
+@font-face {
+	font-family: BBRollerMonoProCR-Bold;
+	src: url("assets/BBRollerMonoProCR-Bold.ttf") format("truetype");
+}
+
+.header-tour {
+	background: url(assets/images/Header-tour.png) no-repeat center top;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+
+    @media(max-width: 833px) {
+    	height: 397px;
+    }
+    &_password {
+    	background: url(assets/images/background-main.jpg) no-repeat bottom;
+    	background-size: cover;
+	    @media(max-width: 833px) {
+	    	height: 384px;
+	    }
+    }
+}
+.label-tour {
+	font-family: AkzidGroCYBolExt;
+    @media(max-width: 1279px) {
+    	
+    }
+	span {
+		font-size: 33px;
+	    background: #B2ED18;
+	    padding: 16px;
+	    border-radius: 8px;
+	    @media(max-width: 833px) {
+	    	padding: 8px;
+	    	font-size: 11.12px;
+	    	 border-radius: 2.7px;
+	    }
+	}
+    @media(max-width: 833px) {
+    
+    }
+    &_password {
+    	margin-top: 55px;
+    	span {
+    		padding: 8px;
+    		font-size: 16.98px;
+    		@media(max-width: 1100px) {
+    			padding: 5px;
+    			font-size: 11.12px;
+    			border-radius: 2.7px;
+    		}
+    	}
+    }
+}
+.label-artist {
+	font-family: AkzidGroCYBolExt;
+    font-size: 294px;
+    color: #F6F0F0;
+    @media(max-width: 1279px) {
+    	font-size: 128px;
+    	margin-top: 20px;
+    }
+    @media(max-width: 833px) {
+    	font-size: 64px;
+    	margin-top: 10px;
+    }
+    &_password {
+    	font-size: 96px;
+    	margin-bottom: 80px;
+    	@media(max-width: 1100px) {
+    		font-size: 64px;
+    		margin-bottom: 55px;
+    	}
+    }
+}
+.header-labels {
+	font-family: AkzidGroCYBolExt;
+    position: absolute;
+	bottom: -75px;
+    width: 100%;
+    text-align: center;
+    @media(max-width: 1279px) {
+    	bottom: -33px;
+    }
+    @media(max-width: 833px) {
+    	bottom: -17px;
+    }
+
+    &_password {
+	    top: 0px;
+	    height: calc(100vh - 160px);
+	    width: calc(100% - 160px);
+	    text-align: center;
+	    margin: 80px;
+	    background: url(assets/images/frame_pass.svg) no-repeat center;
+	    background-size: contain;
+	    @media(max-width: 1100px) {
+	    	background: none;
+	    	position: relative;
+	    	margin: auto;
+	    	height: auto;
+	    	width: auto;
+	    	top: -143px;
+	    	z-index: 2;
+	    }
+    }
+}
+.main {
+	background: url(assets/images/background-main.jpg) repeat-y center top;
+	background-size: contain;
+	@media(min-width: 1925px) {
+		background-size: cover;
+	}
+}
+.concerts-tour {
+	padding-top: 32px;
+	padding-bottom: 30px;
+	font-family: BBRollerMonoProCR-Bold;
+	    @media(max-width: 833px) {
+			padding-top: 35px;
+
+	    }
+}
+.concerts-list {
+	margin: 0 auto;
+    padding-right: 279px;
+    padding-left: 279px;
+    max-width: 1920px;
+    @media(max-width: 1279px) {
+	    padding-right: 89px;
+	    padding-left: 89px;
+    }
+    @media(max-width: 833px) {
+	    padding-right: 13px;
+	    padding-left: 13px;
+    }
+    &-concert {
+    	&:last-child {
+    		&:after { height: 0; }
+    	}
+		max-width: 1390px;
+	    margin: 0 auto;
+	    display: flex;
+	    padding-bottom: 70px;
+	    font-size: 32px;
+	    position: relative;
+	    color: #F6F0F0;
+	    align-items: center;
+	    position: relative;
+	    @media(max-width: 833px) {
+	    	flex-direction: column;
+	    	font-size: 24px;
+	    }
+    	&_button {
+			font-size: 24px;
+		    position: absolute;
+		    color: #000000;
+		    right: 0;
+		    @media(max-width: 833px) {
+		    	position: relative;
+		    }
+		    a {
+				text-decoration: none;
+			    background: #F6F0F0;
+			    color: #000;
+			    text-transform: uppercase;
+			    padding: 8px 24px;
+			    display: block;
+			    border-radius: 8px;
+			    cursor: pointer;
+		    }
+    	}
+    	&_date {
+    		padding-right: 20px;
+		    @media(max-width: 833px) {
+				padding-right: 0;
+				margin-bottom: 7px;
+		    }
+    	}
+    	&_city {
+    		text-transform: uppercase;
+		    @media(max-width: 833px) {
+				margin-bottom: 7px;
+		    }
+    	}
+	    &:after {
+	    	content: "";
+	    	display: block; 
+	    	height: 8px;
+	    	background: url(assets/images/DASH.svg) repeat-x left;
+	    	top: 70px;
+	    	background-size: contain;
+	    	width: 100%;
+	    	position: absolute;
+		    @media(max-width: 833px) {
+		    	top: 150.71px;
+		    } 
+
+	    }	
+
+    }
+}
+.photo_to_passwordPage {
+	background: url(assets/images/photo_to_passwordPage.png) no-repeat center top;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	mix-blend-mode: hard-light;
+	opacity: 0.18;
+	@media(max-width: 1100px) {
+		height: 384px;
+		opacity: 0.65;
+	}
+}
+.form-password {
+	font-size: 24px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-family: BBRollerMonoProCR-Bold;
+	&-label {
+		margin-bottom: 24px;
+	}
+	&-input_container {
+		margin-bottom: 24px;
+
+	}
+	&-input {
+		border: 1px solid #FFFFFF;
+		border-radius: 8px;
+		width: 466px;
+		height: 80px;
+		background: transparent;
+		line-height: 29px;
+		letter-spacing: 0.605em;
+		color: white;
+		font-family: BBRollerMonoProCR-Bold;
+		box-size: border-box;
+		padding: 5px;
+		text-align: center;
+		@media(max-width: 1100px) {
+			height: 55px;
+			width: auto;
+
+		}
+	}
+	&-btn {
+		padding: 0px 24px;
+		gap: 8px;
+		width: 234px;
+		height: 49px;
+		font-family: BBRollerMonoProCR-Bold;
+		background: #F6F0F0;
+		border-radius: 8px;
+		text-transform: uppercase;
+		border: 0;
+		cursor: pointer;
+	}
+}
+.bgPassMob {
+	@media(max-width: 1100px) {
+		height: 100%;
+		width: 100%;
+		background: url(assets/images/background-main.jpg) repeat-y center top;
+		background-size: cover;
+		position: absolute;
+		z-index:1;
+	}
+}
+.badge-mts {
+	background: url(assets/images/badge-mts.jpg);
+    height: 44px;
+    width: auto;
+    margin-top: 32px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media(max-width: 600px) {
+    	height: 19px;
+    }
+}

@@ -1,0 +1,47 @@
+.concert-info__item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #878787;
+    margin: 0 36px 16px;
+}
+
+.concert-info__date {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.concert-info__club-name {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.concert-info__buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    width: 40%;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.concert-info__buy-ticket {
+    color: black;
+    background-color: white;
+}
+
+.concert-info__vk-event {
+    color: white;
+    background-color: #146DF2;
+}

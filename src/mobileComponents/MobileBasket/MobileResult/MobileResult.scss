@@ -1,0 +1,31 @@
+.mobile__result__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile__result__count__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+}
+
+.mobile__result__count-text{
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.mobile__result__button{
+    background-color: #146DF2;
+    width: 70%;
+    height: 54px;
+}
+
+.mobile__result__button-text{
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}

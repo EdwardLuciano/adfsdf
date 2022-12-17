@@ -1,0 +1,105 @@
+@import '../../../styles/variables.scss';
+
+.payment-sequence{    
+    flex: 0 0 20%;
+    padding-right: 10px;
+
+}
+
+
+.payment-sequence__step{
+
+}
+
+.payment-sequence > p {
+    color: #828282;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.payment-sequence__main{
+    display: flex;
+    flex: 0 0 100%;
+    margin-left: 70px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+} 
+#saferoute-cart-widget {
+margin-left: 70px;
+    margin-right: 70px;
+}
+.payment-sequence__line {
+    background: white;
+    border-style: solid;
+    border-width: 1px;
+    margin-block-start: 0;
+    border-color: white;
+}
+
+.payment-sequence.completed > p {
+    font-size: 16px;
+
+    color: #35AE39;
+        font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.payment-sequence > hr {
+    border-color: #828282;
+    background: #828282;
+}
+.payment-sequence.completed > hr {
+    background: #35AE39;
+    border-color: #35AE39;
+
+}
+.payment-sequence.active > hr {
+    background: white;
+    border-color: white;
+
+}
+.payment-sequence.active > p {
+    color:#FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@media screen  and(max-width: 1050px){
+ .payment-sequence{
+     flex: 0 0 22%;
+ }   
+}
+
+
+@media screen  and(max-width: 955px){
+    .payment-sequence{
+        flex: 0 0 24%;
+    }   
+    .payment-sequence__main{
+        margin-left: 10px;
+    }
+}
+
+@media screen  and(max-width: 872px){
+    .payment-sequence__step{
+        padding-bottom: 18px;
+    }  
+    .payment-sequence__step-information{
+        padding-bottom: 18px;
+    }  
+   .payment-sequence__step-adress{
+
+
+       padding-bottom: 0px;
+   }
+}
+
+@media screen  and(max-width: 678px){
+    
+    .payment-sequence__step-information{
+        padding-bottom: 0px;
+    }
+}

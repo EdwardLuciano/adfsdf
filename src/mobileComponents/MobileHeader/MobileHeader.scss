@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.burger-opened {
+    z-index: 2;
+}
+
+.header-info__burger {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.header-general-info__logo {
+    width: 110px;
+}

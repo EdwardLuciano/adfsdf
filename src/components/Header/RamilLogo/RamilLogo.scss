@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.header-general-info__logo {
+    background: url('../../../assets/images/chertochki.png') no-repeat center center;
+    width: 15%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+
+    &-text {
+        font-size: $header-font-size;
+        font-weight: $header-font-weight;
+        color: $header-font-color;
+        margin: 0;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header-general-info__logo {
+        margin-left: 2.5rem;
+        width: 3%;
+    }
+}

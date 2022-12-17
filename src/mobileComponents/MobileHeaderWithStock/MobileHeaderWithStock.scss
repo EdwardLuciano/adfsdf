@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.mobile-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 24px;
+
+    & > .header-info-merch__stockbag {
+        margin-right: 5%;
+    }
+}

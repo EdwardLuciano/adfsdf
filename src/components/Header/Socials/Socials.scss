@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.header-general-info__social {
+    display: flex;
+    height: fit-content;
+    justify-content: flex-end;
+    margin-right: 5rem;
+
+    &-link {
+        display: flex;
+        padding-left: 1.9rem;
+
+        &-icon {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header-general-info__social {
+        display: none;
+    }
+}
+
+// & = .header-general-info__social

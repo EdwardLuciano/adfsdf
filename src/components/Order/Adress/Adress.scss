@@ -1,0 +1,301 @@
+.address__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.address__city{
+    width: 25%;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #F2F2F2;
+    padding-left: 24px;
+    font-size: 16px;
+}
+
+.address__street{
+    width: 25%; 
+    border-radius: 8px;
+    height: 40px;
+    background-color: #F2F2F2;
+    padding-left: 24px;
+    font-size: 16px;
+}
+
+.address__house-flat{
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+    width: 26.5%;
+    margin-top: 10px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.address__house{
+    width: 55%;
+    border-radius: 8px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #F2F2F2;
+    padding: 0px;
+    padding-left: 24px;
+    font-size: 16px;
+}
+
+.address__flat{
+    width: 55%;
+    border-radius: 8px;
+    height: 40px;
+    background-color: #F2F2F2;
+    padding: 0px;
+    padding-left: 24px;
+    font-size: 16px;
+}
+
+
+.address__text{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.address__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.address__description-text{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.address__description-text-delivery{
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.address__description-promocode{
+    width: 25%;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    padding-left: 24px;
+    font-size: 16px;
+}
+
+.address__description-radio{
+    display:flex;
+}
+
+.address__description-check{
+    display: flex;
+    align-items: center;
+}
+
+.address__button-container{
+    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.address__button-behind-text{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.address__button-next-text{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.address__button-behind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7E7E7;
+    border-radius: 8px;
+    width: 160px;
+    height: 54px;
+    text-decoration: none;
+
+    &:visited {
+        color: black;
+    }
+}
+
+.address__button-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #146DF2;
+    border-radius: 8px;
+    width: 160px;
+    height: 54px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+
+@media screen  and(max-width: 1700px){
+    .address__description-promocode{
+        width: 28%;
+    }
+    .address__city{
+        width: 28%;
+    }
+    .address__street{
+        width: 28%;
+    }
+    .address__house-flat{
+        width: 30%;
+    }   
+    .address__house{
+        width: 60%;
+    }
+    .adress__flat{
+        width: 60%;
+    }
+}
+
+
+@media screen  and(max-width: 1450px){
+    .address__description-promocode{
+        width: 30%;
+    }
+    .address__city{
+        width: 30%;
+    }
+    .address__street{
+        width: 30%;
+    }
+    .address__house-flat{
+        width: 32%;
+    }   
+    .address__house{
+        width: 65%;
+    }
+    .adress__flat{
+        width: 65%;
+    }
+}
+
+
+@media screen  and(max-width: 1340px){
+    .address__description-promocode{
+        width: 35%;
+    }
+    .address__city{
+        width: 35%;
+    }
+    .address__street{
+        width: 35%;
+    }
+    .address__house-flat{
+        width: 37%;
+    }   
+    .address__house{
+        width: 65%;
+    }
+    .adress__flat{
+        width: 65%;
+    }
+}
+
+@media screen  and(max-width: 1200px){
+    .address__description-promocode{
+        width: 40%;
+    }
+    .address__city{
+        width: 40%;
+    }
+    .address__street{
+        width: 40%;
+    }
+    .address__house-flat{
+        width: 42.5%;
+    }   
+    .address__house{
+        width: 65%;
+    }
+    .adress__flat{
+        width: 65%;
+    }
+}
+
+@media screen  and(max-width: 1020px){
+    .address__description-promocode{
+        width: 45%;
+    }
+    .address__city{
+        width: 45%;
+    }
+    .address__street{
+        width: 45%;
+    }
+    .address__house-flat{
+        width: 48%;
+    }   
+    .address__house{
+        width: 65%;
+    }
+    .adress__flat{
+        width: 65%;
+    }
+}
+
+@media screen  and(max-width: 850px){
+    .address__description-promocode{
+        width: 50%;
+    }
+    .address__city{
+        width: 50%;
+    }
+    .address__street{
+        width: 50%;
+    }
+    .address__house-flat{
+        width: 53.5%;
+    }   
+    .address__house{
+        width: 65%;
+    }
+    .adress__flat{
+        width: 65%;
+    }
+}
+
+@media screen  and(max-width: 745px){
+    .address__description-promocode{
+        width: 56%;
+    }
+    .address__city{
+        width: 56%;
+    }
+    .address__street{
+        width: 56%;
+    }
+    .address__house-flat{
+        width: 60%;
+    }   
+    .address__house{
+        width: 65%;
+    }
+    .adress__flat{
+        width: 65%;
+    }
+}

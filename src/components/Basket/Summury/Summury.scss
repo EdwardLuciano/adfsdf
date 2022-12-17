@@ -1,0 +1,79 @@
+.summury__content {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 150px;
+}
+
+.summury__container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 18%;
+    margin-right: 135px;
+}
+
+
+.summury__container__text {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.summury__text {
+    color:white;
+    font-weight: bold;
+    font-size: 24px;
+    //text-align: right;
+}
+
+.summury__button {
+    height: 72px;
+    background-color: #146DF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .25s ease-in-out;
+}
+
+.summury__button:hover {
+    background-color: #444;
+}
+
+.summury__button-text {
+
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1400px) {
+    .summury__container {
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .summury__container {
+        width: 27%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .summury__container {
+        width: 29%;
+        margin-right: 90px;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    .summury__container {
+        width: 34%;
+        margin-right: 80px;
+        
+    }
+}

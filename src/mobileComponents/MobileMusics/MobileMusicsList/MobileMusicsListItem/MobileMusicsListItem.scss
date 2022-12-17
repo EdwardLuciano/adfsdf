@@ -1,0 +1,26 @@
+.mobile-musics__list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    &__image {
+        width: 150px;
+        height: 150px;
+    }
+
+    &__track-title {
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+    }
+
+    &__track-type {
+        color: white;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0;
+    }
+}

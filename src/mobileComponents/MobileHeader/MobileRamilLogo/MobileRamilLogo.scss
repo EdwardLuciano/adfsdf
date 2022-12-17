@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+
+.mobile-header-general-info__logo {
+    background: center center / contain no-repeat url('../../../assets/images/chertochki.png');
+    width: 35%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+        font-size: $header-font-size;
+        font-weight: $header-font-weight;
+        color: $header-font-color;
+        margin: 0;
+        text-align: center;
+    }
+}

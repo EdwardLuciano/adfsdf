@@ -1,0 +1,79 @@
+@import '../../../../styles/variables.scss';
+
+.merchandise__list-item {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 0 5% 50px 50px;
+    border-radius: 16px;
+
+    img {
+        max-height: 280px;
+        object-position: top;
+        border-top-right-radius: 13px;
+        object-fit: cover;
+        border-top-left-radius: 13px;
+    }
+    
+    .merchandise__list-item__information {
+        padding: 24px 32px;
+
+        .merchandise__list-item__title {
+            margin: 0 0 16px 0;
+            font-size: $merchandise-item-title-font-size;
+        }
+
+        .merchandise__list-item__description {
+            margin: 0 0 16px 0;
+            font-size: $merchandise-item-description-font-size;
+        }
+
+        .merchandise__list-item__price {
+            display: inline-flex;
+            margin-bottom: 47px;
+
+            .current-price {
+                margin: 0;
+                font-size: $merchandise-item-price-font-size;
+                font-weight: 700;
+                margin-right: 10px;
+            }
+
+            .previous-price {
+                margin: 0;
+                color: $merchandise-item-prev-price-color;
+                font-size: $merchandise-item-price-font-size;
+            }
+        }
+
+        .merchandise__list-item__buttons {
+            display: flex;
+            justify-content: space-between;
+
+            .merchandise__list-item__more {
+                text-decoration: none;
+                display: inline-flex;
+                background-color: #E7E7E7;
+                padding: 17px 31px;
+                border-radius: 8px;
+                color: #000;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .merchandise__list-item__buy {
+                text-decoration: none;
+                display: inline-flex;
+                background-color: #146DF2;
+                padding: 17px 31px;
+                border-radius: 8px;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+    }
+}

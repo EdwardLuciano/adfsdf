@@ -1,0 +1,36 @@
+.burger-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background-color: #0F0F0F;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 5.5em;
+
+    &__link-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 19px 0;
+        background-color: #1A1A1A;
+    }
+
+    &__link-container:nth-of-type(2) {
+        border-top: 1px solid #353535;
+        border-bottom: 1px solid #353535;
+    }
+
+    &__link-container:nth-of-type(3) {
+        border-bottom: 1px solid #353535;
+    }
+
+    &__link {
+        color: white;
+        font-weight: 900;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}

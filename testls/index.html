@@ -1,0 +1,30 @@
+<html>
+	<head>
+	</head>
+	<body>
+		item: <p id="itemLabel"></p>
+		<form id="fff">
+			<input type="text">
+			<input type="submit">
+		</form>
+
+		<script>
+
+			localStorage.setItem('item', 'test1');
+			let elem = document.getElementById('itemLabel');
+			elem.text = localStorage.getItem('item');
+
+			var form = document.getElementById("fff");
+
+			function test(element) {
+				element.preventDefault();
+
+				localStorage.setItem('item', 'test2');
+				console.log(localStorage.getItem('item'));
+			}
+
+			form.addEventListener("submit", test, true);
+
+		</script>
+	</body>
+</html>

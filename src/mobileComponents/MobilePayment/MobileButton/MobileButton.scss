@@ -1,0 +1,37 @@
+.button__container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-behind{
+    height: 60px;
+    width: 40%;
+    border-radius: 8px;
+background: white;
+    text-decoration: none;
+}
+
+.button-next{
+    height: 60px;
+    width: 40%;
+    border-radius: 8px;
+    background-color: #146DF2;
+    margin-left: 10px;
+}
+
+.button-next-text{
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.button-behind-text{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #0F0F0F;
+    margin-top: 19px;
+}

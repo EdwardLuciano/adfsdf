@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+
+.mobile-concert-header__logo {
+    background: center center / contain no-repeat url('../../../assets/images/large_chertochki.png');
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 30px 0;
+
+    &-text {
+        font-size: $mobile-concerts-header-font-size;
+        font-weight: $header-font-weight;
+        color: $header-font-color;
+        margin: 0;
+        text-align: center;
+    }
+}

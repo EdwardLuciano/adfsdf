@@ -1,0 +1,9 @@
+@import '../../../styles/variables.scss';
+
+.concerts__concert {
+    .text {
+        color: $concerts-font-color;
+        font-size: $concerts-font-size;
+        font-weight: $concerts-font-weight;
+    }
+}

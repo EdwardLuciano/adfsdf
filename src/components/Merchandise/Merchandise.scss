@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.merchandise {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: radial-gradient(42.72% 42.72% at 50% 50%, #292929 0%, #0F0F0F 100%);
+    padding: 25px 0;
+}
+.commingSoon {
+margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    border-radius: 6px;
+    margin-top: 21px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    padding: 60px 0px 60px 0px;
+    @media(max-width: 640px) {
+        font-size: 20px;
+            padding: 10px 0px 10px 0px;
+            margin-top:0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+    }
+}

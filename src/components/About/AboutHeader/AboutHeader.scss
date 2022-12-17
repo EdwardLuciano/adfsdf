@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.about__header-logo {
+    background: url('../../../assets/images/dash_about_desc.png') no-repeat;
+    width: 325px;
+    height: 100px;
+    z-index: 2;
+    margin-top: 50px;
+    margin-left: 5%;
+
+    &-text {
+        font-size: $concerts-header-font-size;
+        font-weight: $header-font-weight;
+        color: $header-font-color;
+        text-align: center;
+        margin: 0;
+        margin-top: 15px;
+    }
+}

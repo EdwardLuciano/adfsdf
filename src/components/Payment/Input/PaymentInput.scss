@@ -1,0 +1,92 @@
+.payment-input__container {
+    text-align: center;
+}
+
+.payment-input__text {
+    color:white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.payment-input__input-fio {
+    width: 25%; 
+    height: 40px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    padding-left: 24px;
+    font-size: 16px;
+    
+}
+.payment-input__button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top:50px;
+}
+
+.payment-input__button-next {
+    height: 50px;
+    width: 160px;
+    margin-left: 20px;
+    background-color: #146DF2;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.payment-input__button-behind {
+    height: 50px;
+    width: 160px;
+    background-color: #E7E7E7;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.payment-input__button-next-text{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.payment-input__button-behind-text{
+    color: #0F0F0F;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+
+@media screen  and(max-width: 1340px){
+    .payment-input__input-fio{
+        width:30%;       
+    }    
+}
+
+@media screen  and(max-width: 1240px){
+    .payment-input__input-fio{
+        width:35%;       
+    }    
+}
+
+@media screen  and(max-width: 920px){
+    .payment-input__input-fio{
+        width:38%;       
+    }    
+}
+
+@media screen  and(max-width: 820px){
+    .payment-input__input-fio{
+        width:43%;       
+    }    
+}
+
+@media screen  and(max-width: 750px){
+    .payment-input__input-fio{
+        width:47%;       
+    }    
+}
