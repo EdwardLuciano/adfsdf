@@ -22,7 +22,7 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
     //     localStorage.setItem('checkoutData').email = email;
     // }, [email]);
 
-    // useEffect(() => {
+    // useEffect(() => {b
     //     localStorage.setItem('checkoutData').phone = phone;
     // }, [phone]);
         useEffect(() => {
