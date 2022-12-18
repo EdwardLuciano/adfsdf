@@ -9,12 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function OrderMain({cart,setCart,getCartTotal,getTotalSum,setCheckoutData,checkoutData,stageCheckout,setStageCheckout}){
 
-        let newCD = {...cart};
-        console.log('Тестирование вывода через переменную');
-        console.log(newCD);
-            console.log(localStorage.getItem('cart')+'__order');
-
-            console.log(localStorage.getItem('checkoutData')+'__order');
+    console.log(localStorage.getItem('checkoutData')+'__OrderMain');
 
     useEffect(() => {
         var popStateEvent = new PopStateEvent('popstate');

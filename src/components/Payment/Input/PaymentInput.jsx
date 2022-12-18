@@ -25,10 +25,7 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
     // useEffect(() => {b
     //     localStorage.setItem('checkoutData').phone = phone;
     // }, [phone]);
-        useEffect(() => {
-            localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
 
-        }, [checkoutData]);
     function saveCheckoutData() {
 
         let newCD = {...checkoutData};
@@ -37,15 +34,14 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
         newCD.email = email;
         newCD.phone = phone;
 
-       //  localStorage.setItem('checkoutData', JSON.stringify(newCD));
-
-
-
+        localStorage.setItem("checkoutData", JSON.stringify(newCD));
+        console.log(localStorage.getItem('checkoutData')+'__PaymentInput');
+        console.log(newCD);
 
         setCheckoutData(newCD);
 
         //console.log(localStorage.getItem('checkoutData')+'__PaymentInput');
-        console.log(checkoutData);
+        //console.log(checkoutData);
 
 
     }
@@ -64,7 +60,7 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
                 if ((phone.length > 5) && (phone.length < 50)) {
 
                     saveCheckoutData();
-                          //  navigate('/order', { replace: false });
+                    navigate('/order', { replace: false });
 
                 
                 } else {

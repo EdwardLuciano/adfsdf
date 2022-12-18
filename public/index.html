@@ -83,7 +83,8 @@
 
 
         window.addEventListener('popstate', function(e){
-          console.log(localStorage.getItem('checkoutData')+'___');
+          console.log(localStorage.getItem('cart')+'___totalPrice');
+          console.log(localStorage.getItem('checkoutData')+'___index.html');
             const widget = new SafeRouteCartWidget("saferoute-cart-widget", {
               apiScript: "/saferoute-widget-api.php",
               hideSRLogo: true,
@@ -100,14 +101,14 @@
 
             widget.on("change", (data) => {
 
-            //  console.log(data);
+              //console.log(data);
 
               let checkoutData = JSON.parse(localStorage.getItem('checkoutData'));
               let newCheckout = {...checkoutData};
               newCheckout.fio = data.contacts.fullName;
               newCheckout.phone = data.contacts.phone;
               newCheckout.email = data.contacts.email;
-              newCheckout.deliveryPrice = data.delivery.totalPrice;
+              newCheckout.deliveryPrice = (data.delivery ? data.delivery.totalPrice : 0);
               localStorage.setItem("checkoutData", JSON.stringify(newCheckout));
 
             });
