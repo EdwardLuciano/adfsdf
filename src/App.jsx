@@ -9,6 +9,8 @@ import Tour from './components/pages/tour/tour';
 import Tourtest from './components/pages/tourtest/tour';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Refund from './components/Refund/Refund';
+import Product from './components/pages/product/ProductMain';
+
 
 
 import Password from './components/pages/password/password';
@@ -80,7 +82,7 @@ function App() {
       <Route path='/password' element={<Password />} />
       <Route path='/privacypolicy' element={<PrivacyPolicy cart={cart} setCart={setCart} getCartTotal={getCartTotal} getTotalSum={getTotalSum} removeFromCart={removeFromCart} />} />
       <Route path='/refund' element={<Refund cart={cart} setCart={setCart} getCartTotal={getCartTotal} getTotalSum={getTotalSum} removeFromCart={removeFromCart} />} />
-
+      <Route path="/product/:id" element={<Product cart={cart} setCart={setCart} getCartTotal={getCartTotal} />} />
     </Routes>
    
   );

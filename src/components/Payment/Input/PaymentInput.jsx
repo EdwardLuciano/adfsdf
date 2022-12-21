@@ -13,19 +13,6 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
 
     let navigate = useNavigate();
 
-    // useEffect(() => {
-    //                   localStorage.setItem("checkoutData", JSON.stringify(fio));
-
-    // }, [fio]);
-
-    // useEffect(() => {
-    //     localStorage.setItem('checkoutData').email = email;
-    // }, [email]);
-
-    // useEffect(() => {b
-    //     localStorage.setItem('checkoutData').phone = phone;
-    // }, [phone]);
-
     function saveCheckoutData() {
 
         let newCD = {...checkoutData};
@@ -35,14 +22,10 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
         newCD.phone = phone;
 
         localStorage.setItem("checkoutData", JSON.stringify(newCD));
-        console.log(localStorage.getItem('checkoutData')+'__PaymentInput');
-        console.log(newCD);
+        // console.log(localStorage.getItem('checkoutData')+'__PaymentInput');
+        // console.log(newCD);
 
         setCheckoutData(newCD);
-
-        //console.log(localStorage.getItem('checkoutData')+'__PaymentInput');
-        //console.log(checkoutData);
-
 
     }
 

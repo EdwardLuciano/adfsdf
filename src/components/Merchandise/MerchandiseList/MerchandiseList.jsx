@@ -33,7 +33,7 @@ export default function MerchandiseList({ setCart, cart }) {
       console.log('error get merch');
     })
   }
-
+console.log(items);
   const addToCart = (product) => {
     let newCart = [...cart];
     let itemInCart = newCart.find(
@@ -42,6 +42,8 @@ export default function MerchandiseList({ setCart, cart }) {
     if (itemInCart) {
         itemInCart.count++;
         itemInCart.sum=itemInCart.price*itemInCart.count;
+        console.log(newCart);
+        console.log(itemInCart);
     } else {
       itemInCart = {
         ...product,
@@ -49,11 +51,12 @@ export default function MerchandiseList({ setCart, cart }) {
         sum: product.price,
         size: product.sizes[0],
       };
+
       newCart.push(itemInCart);
     }
     console.log(itemInCart);
     setCart(newCart);
-    
+    console.log(newCart);
   };
 
 

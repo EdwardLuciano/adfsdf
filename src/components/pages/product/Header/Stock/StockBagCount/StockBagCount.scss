@@ -1,0 +1,16 @@
+@import '../../../../../../styles/variables.scss';
+
+.header-info-merch__stockbag{
+    position: relative;
+    
+}
+
+.header-info-merch__count{
+    position: absolute;
+    color:white;
+    font-size: 12px;
+    font-weight: 500;
+    top:0;
+    text-align: center;
+    width: 100%;
+}
