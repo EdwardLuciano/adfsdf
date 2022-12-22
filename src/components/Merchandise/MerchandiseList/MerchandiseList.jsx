@@ -31,14 +31,14 @@ export default function MerchandiseList({ setCart, cart }) {
     getMerch();
 }, []);
 
-  const alert = useAlert();
-  const [count, setCount] = useState('Купить');
 
 
 
   const Button_Merch = ({product}) => {
 
-
+    let checkInCart = cart.find(
+        (item) => product.id === item.id
+    );
 
     const go_to_basket = () => {
       navigate('/basket', { replace: false });
@@ -48,12 +48,6 @@ export default function MerchandiseList({ setCart, cart }) {
     // console.log(typeof product);
 
     const addToCart = (product) => {
-      //console.log('Зашли');
-      //console.log(count);
-      //console.log(product);
-      //console.log(product.sizes);
-      //console.log(product.price);
-      //console.log(product.product.product.price);
       let newCart = [...cart];
       let itemInCart = newCart.find(
         (item) => product.title === item.title
@@ -76,9 +70,9 @@ export default function MerchandiseList({ setCart, cart }) {
       //const cartFromLocalStorage = (JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [])
       
 
-      if (count == 'Купить'){
-        setCount('Перейти в корзину');
-      }
+      // if (count == 'Купить'){
+      //   setCount('Перейти в корзину');
+      // }
   
        
       alert.show(<div className = "merchandise_alert" style={{ color: 'white', textTransform: 'none', width: '195px' }}>Товар добавлен в корзину</div>,
@@ -89,11 +83,11 @@ export default function MerchandiseList({ setCart, cart }) {
     };
     
 
-    function contains(arr, elem) {
-     return arr.find((i) => i.idx == elem.idx) != -1;
-    }
+    //function contains(arr, elem) {
+    //  return arr.find((i) => i.idx == elem.idx) != -1;
+    //}
 
-    let primer = contains(cart, product);
+    //let primer = contains(cart, product);
     
     // console.log('Проверка функции, которая находит продукт в массиве'); 
     
@@ -101,10 +95,7 @@ export default function MerchandiseList({ setCart, cart }) {
     console.log('Продукты');
     console.log(product);
    
-    let checkInCart = cart.find(
-      (item) => product.id === item.id);
-    console.log(checkInCart);
-
+    
       if (count == 'Купить'){
 
         return (
@@ -122,8 +113,7 @@ export default function MerchandiseList({ setCart, cart }) {
                 <a className="merchandise__list-item__buy" onClick={() => addToCart(product)}>Купить</a>
             </div>
         )
-    }
-    else{
+    } else{
 
         return (
             <div className="merchandise__list-item__buttons_go_to_basket" >
