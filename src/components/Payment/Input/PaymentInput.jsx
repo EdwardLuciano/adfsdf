@@ -29,7 +29,7 @@ export default function PaymentInput({cart,setCart,getCartTotal,getTotalSum,setC
 
     }
 
-
+    //Артамон чемпион!!!!!!!!!!!!!!!!!!!!!!!
 
     const handleSubmit = (event) => {
         
