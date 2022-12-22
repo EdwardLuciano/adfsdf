@@ -100,6 +100,8 @@ export default function Grid({cart,setCart,removeFromCart}) {
 
 function sizes(sizes, first = 0) {
 
+    console.log(`Выводим размеры ${sizes}`);
+
 
     const sizesList = sizes.map((item, id) => {
         const container = {};
@@ -111,8 +113,8 @@ function sizes(sizes, first = 0) {
     })
 
     if(first == 1) {
-
-        var firstSize=sizesList[Object.keys(sizesList)[0]];
+        console.log(`Условие first == 1 ${sizes}`);
+        var firstSize = sizesList[Object.keys(sizesList)[0]];
         return firstSize.label;
 
     } else {
@@ -135,7 +137,8 @@ function sizes(sizes, first = 0) {
 
           setCart(newCart);
 
-  console.log(cart);    
+  console.log(cart);
+
   };
 
 
