@@ -11,7 +11,7 @@ import {
   positions,
   transitions
 } from 'react-alert'
-import { TRUE } from 'node-sass';
+
 
 
 export default function MerchandiseList({ setCart, cart }) {
@@ -31,6 +31,7 @@ export default function MerchandiseList({ setCart, cart }) {
     getMerch();
 }, []);
 
+  const alert = useAlert();
   const [count, setCount] = useState('Купить');
 
 
@@ -88,11 +89,11 @@ export default function MerchandiseList({ setCart, cart }) {
     };
     
 
-    //function contains(arr, elem) {
-    //  return arr.find((i) => i.idx == elem.idx) != -1;
-    //}
+    function contains(arr, elem) {
+     return arr.find((i) => i.idx == elem.idx) != -1;
+    }
 
-    //let primer = contains(cart, product);
+    let primer = contains(cart, product);
     
     console.log('Проверка функции, которая находит продукт в массиве'); 
     
@@ -100,7 +101,6 @@ export default function MerchandiseList({ setCart, cart }) {
     console.log('Продукты');
     console.log(product);
    
-    
       if (count == 'Купить'){
 
         return (
@@ -121,6 +121,7 @@ export default function MerchandiseList({ setCart, cart }) {
 
       }
     
+   
   
   }
   
