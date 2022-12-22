@@ -31,7 +31,6 @@ export default function MerchandiseList({ setCart, cart }) {
     getMerch();
 }, []);
 
-  const [count, setCount] = useState('Купить');
 
 
 
@@ -96,12 +95,10 @@ export default function MerchandiseList({ setCart, cart }) {
     // console.log('Продукты');
     // console.log(product);
 
-    let checkInCart = cart.find(
-        (item) => product.id === item.id
-    );
+
     console.log(checkInCart);
     
-    if (count == 'Купить'){
+    if (!checkInCart){
             console.log('Заходж');
 
         return (
