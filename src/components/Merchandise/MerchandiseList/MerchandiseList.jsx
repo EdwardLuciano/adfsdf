@@ -21,7 +21,7 @@ export default function MerchandiseList({ setCart, cart }) {
   //  const [cart, setCart] = useState(cartFromLocalStorage);
 
 
-  
+  const alert = useAlert();
 
   let navigate = useNavigate();
   const [items, setItems] = useState([]);
@@ -91,21 +91,15 @@ export default function MerchandiseList({ setCart, cart }) {
     
     // console.log('Проверка функции, которая находит продукт в массиве'); 
     
-    console.log(cart);
-    console.log('Продукты');
-    console.log(product);
-   
-    
-      if (count == 'Купить'){
+    // console.log(cart);
+    // console.log('Продукты');
+    // console.log(product);
 
-        return (
-            <div className="merchandise__list-item__buttons">
-                <a className="merchandise__list-item__more">Подробнее</a>
-                <a className="merchandise__list-item__buy" onClick={() => addToCart(product)}>{count}</a>
-            </div>
-        )
-    }
-    else if (typeof checkInCart == 'undefined') {
+
+    console.log(checkInCart);
+    
+    if (!checkInCart){
+            console.log('Заходж');
 
         return (
             <div className="merchandise__list-item__buttons">
