@@ -21,7 +21,7 @@ export default function MerchandiseList({ setCart, cart }) {
   //  const [cart, setCart] = useState(cartFromLocalStorage);
 
 
-  const alert = useAlert();
+  
 
   let navigate = useNavigate();
   const [items, setItems] = useState([]);
@@ -101,7 +101,10 @@ export default function MerchandiseList({ setCart, cart }) {
     console.log('Продукты');
     console.log(product);
    
-    
+    let checkInCart = cart.find(
+      (item) => product.id === item.id);
+    console.log(checkInCart);
+
       if (count == 'Купить'){
 
         return (
