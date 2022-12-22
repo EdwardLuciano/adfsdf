@@ -17,10 +17,6 @@ import {
 export default function MerchandiseList({ setCart, cart }) {
 
 
- //   const cartFromLocalStorage = (JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [])// "[]"
-  //  const [cart, setCart] = useState(cartFromLocalStorage);
-
-  
   const alert = useAlert();
 
   let navigate = useNavigate();
@@ -45,7 +41,6 @@ export default function MerchandiseList({ setCart, cart }) {
     }
 
 
-    // console.log(typeof product);
 
     const addToCart = (product) => {
       let newCart = [...cart];
@@ -64,15 +59,10 @@ export default function MerchandiseList({ setCart, cart }) {
         };
         newCart.push(itemInCart);
       }
-      // console.log(itemInCart);
+   
       setCart(newCart);
       
-      //const cartFromLocalStorage = (JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [])
-      
-
-      // if (count == 'Купить'){
-      //   setCount('Перейти в корзину');
-      // }
+ 
   
        
       alert.show(<div className = "merchandise_alert" style={{ color: 'white', textTransform: 'none', width: '195px' }}>Товар добавлен в корзину</div>,
@@ -86,7 +76,7 @@ export default function MerchandiseList({ setCart, cart }) {
     //function contains(arr, elem) {
     //  return arr.find((i) => i.idx == elem.idx) != -1;
     //}
-    //fasgasgagafgagfdsgfr
+
     //let primer = contains(cart, product);
     
     // console.log('Проверка функции, которая находит продукт в массиве'); 
@@ -146,14 +136,6 @@ export default function MerchandiseList({ setCart, cart }) {
 
   }
   
-
-
-  // const apiURL = "https://api.ramilmusic.com/merch?_format=json";
-
-  // useEffect(() => {
-  //      getMerch();
-  // }, []);
-
   const getMerch = () => {
     axios.get(apiURL)
     .then(function (response) {
@@ -181,12 +163,9 @@ export default function MerchandiseList({ setCart, cart }) {
       };
       newCart.push(itemInCart);
     }
-    // console.log(itemInCart);
     setCart(newCart);
     
   };
-
-
 
 
 
@@ -218,23 +197,3 @@ export default function MerchandiseList({ setCart, cart }) {
         </>
     );
 }
-
-
- //alert('Hello buy')
-    //const alert = useAlert();
-    //alert.show('Товар добавлен в корзину!');
-
-    // alert.show('Товар добавлен в корзину', {
-    //   timeout: 2000, // custom timeout just for this one alert
-    //   type: 'success',
-    // })
-
-    //document.getElementById("tre").style.visibility = 'none';
-    //document.getElementById("new_try").style.visibility = 'visible';
-    //alert.show('Zalupa')
-
-
-
-
-
-    //alert("Alert text", {title: 'Olá', button: "Go!"})
