@@ -21,7 +21,7 @@ export default function MerchandiseList({ setCart, cart }) {
   //  const [cart, setCart] = useState(cartFromLocalStorage);
 
 
-
+  const alert = useAlert();
 
   let navigate = useNavigate();
   const [items, setItems] = useState([]);
@@ -45,7 +45,7 @@ export default function MerchandiseList({ setCart, cart }) {
     }
 
 
-    console.log(typeof product);
+    // console.log(typeof product);
 
     const addToCart = (product) => {
       //console.log('Зашли');
@@ -70,7 +70,7 @@ export default function MerchandiseList({ setCart, cart }) {
         };
         newCart.push(itemInCart);
       }
-      console.log(itemInCart);
+      // console.log(itemInCart);
       setCart(newCart);
       
       //const cartFromLocalStorage = (JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [])
@@ -95,31 +95,40 @@ export default function MerchandiseList({ setCart, cart }) {
 
     let primer = contains(cart, product);
     
-    console.log('Проверка функции, которая находит продукт в массиве'); 
+    // console.log('Проверка функции, которая находит продукт в массиве'); 
     
     console.log(cart);
     console.log('Продукты');
     console.log(product);
    
+    
       if (count == 'Купить'){
 
         return (
-          <div className="merchandise__list-item__buttons" >
-                                <a className="merchandise__list-item__more">Подробнее</a>
-                                <a className="merchandise__list-item__buy" onClick={() => addToCart(product)}>{count}</a>
-                            </div>
+            <div className="merchandise__list-item__buttons">
+                <a className="merchandise__list-item__more">Подробнее</a>
+                <a className="merchandise__list-item__buy" onClick={() => addToCart(product)}>{count}</a>
+            </div>
         )
-      }
-      else{
+    }
+    else if (typeof checkInCart == 'undefined') {
 
         return (
-          <div className="merchandise__list-item__buttons_go_to_basket" >
-                                <a className="merchandise__list-item__go_to_basket" onClick={() => go_to_basket()}> Перейти в корзину </a>
-                            </div>
+            <div className="merchandise__list-item__buttons">
+                <a className="merchandise__list-item__more">Подробнее</a>
+                <a className="merchandise__list-item__buy" onClick={() => addToCart(product)}>Купить</a>
+            </div>
+        )
+    }
+    else{
+
+        return (
+            <div className="merchandise__list-item__buttons_go_to_basket" >
+                <a className="merchandise__list-item__go_to_basket" onClick={() => go_to_basket()}> Перейти в корзину </a>
+            </div>
         )
 
-
-      }
+    }
     
    
   
@@ -160,7 +169,7 @@ export default function MerchandiseList({ setCart, cart }) {
       };
       newCart.push(itemInCart);
     }
-    console.log(itemInCart);
+    // console.log(itemInCart);
     setCart(newCart);
     
   };
@@ -184,7 +193,7 @@ export default function MerchandiseList({ setCart, cart }) {
                             <p className="current-price">{product.price}₽</p>
                             <del className="previous-price">{product.oldprice}₽</del>
                         </div>
-                        {console.log("Тут")}
+                      
                         <Button_Merch product = {product} />
                     </div>
                 </div>
