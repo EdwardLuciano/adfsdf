@@ -95,9 +95,28 @@ export default function MerchandiseList({ setCart, cart }) {
         )
 
     }
-    
    
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
   }
   
   const getMerch = () => {
