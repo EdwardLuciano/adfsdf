@@ -86,7 +86,7 @@ export default function MerchandiseList({ setCart, cart }) {
     //function contains(arr, elem) {
     //  return arr.find((i) => i.idx == elem.idx) != -1;
     //}
-
+    //fasgasgagafgagfdsgfr
     //let primer = contains(cart, product);
     
     // console.log('Проверка функции, которая находит продукт в массиве'); 
@@ -115,6 +115,12 @@ export default function MerchandiseList({ setCart, cart }) {
             </div>
         )
 
+
+
+
+
+
+
     }
    
 
@@ -134,7 +140,7 @@ export default function MerchandiseList({ setCart, cart }) {
 
 
 
-    
+
 
 
 
