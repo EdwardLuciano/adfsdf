@@ -31,7 +31,7 @@ export default function MerchandiseList({ setCart, cart }) {
     getMerch();
 }, []);
 
-  //const [count, setCount] = useState('Купить');
+  const [count, setCount] = useState('Купить');
 
 
 
@@ -84,10 +84,24 @@ export default function MerchandiseList({ setCart, cart }) {
     };
     
 
+    //function contains(arr, elem) {
+    //  return arr.find((i) => i.idx == elem.idx) != -1;
+    //}
 
-
+    //let primer = contains(cart, product);
     
-    if (!checkInCart){
+    // console.log('Проверка функции, которая находит продукт в массиве'); 
+    
+    // console.log(cart);
+    // console.log('Продукты');
+    // console.log(product);
+
+    let checkInCart = cart.find(
+        (item) => product.id === item.id
+    );
+    console.log(checkInCart);
+    
+    if (count == 'Купить'){
             console.log('Заходж');
 
         return (
@@ -106,6 +120,7 @@ export default function MerchandiseList({ setCart, cart }) {
 
     }
     
+   
   
   }
   
