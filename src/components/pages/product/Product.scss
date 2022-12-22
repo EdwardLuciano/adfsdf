@@ -4,7 +4,7 @@
 
     &__container {
         width: 100%;
-        padding: 35px;
+        padding: 25px 30px;
         margin-right: auto;
         margin-left: auto;
         background-color: #FFFFFF;
@@ -75,6 +75,7 @@
 }
 .SizesSelect {
     display: flex;
+    margin-bottom: 26px;
 
     &__size {
         background-color: #D9D9D9;
@@ -92,5 +93,92 @@
 
     &__size.selected {
         border: 2px solid #146DF2;
+    }
+}
+
+.productSelectSize {
+    &__label {
+        font-size: 16px;
+        color: #494949;
+        margin-bottom: 16px;
+    }
+
+}
+.productDescription {
+    padding-left: 30px;
+    &__addToCart {
+        background-color: #F72723;
+        color: #FFFFFF;
+        font-weight: 700;
+        padding: 17px 25.5px;
+        display: inline-block;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 25px;
+        @media(max-width: 1300px) {
+            padding: 14px 17.5px;
+        }
+    }
+
+    &__extraInfo {
+        margin-bottom: 30px;
+    }
+}
+
+.productExtraInfo {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    display: flex;
+    &__deliveryWorldwide {
+        &::before {
+            content: "";
+            display: block;
+            width: 22px;
+            height: 22px;
+            background-image: url(/assets/images/box.svg);
+            margin-right: 16px;
+            margin-bottom: 12px;
+            @media(max-width: 1300px) {
+                width: 19px;
+                height: 19px;
+                margin-right: 12px;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__refund {
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 20px;
+            background-image: url(/assets/images/change.svg);
+            margin-right: 20px;
+            margin-left: 3px;
+            @media(max-width: 1300px) {
+                width: 13px;
+                height: 16.3px;
+                margin-right: 15px;
+                background-size: contain;
+            }
+        }
+    }
+
+    @media(max-width: 1300px) {
+        font-size: 14px;
+    }
+}
+
+.productStructure {
+    &__label {
+        font-weight: 900;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    &__desc {
+        font-size: 11px;
     }
 }

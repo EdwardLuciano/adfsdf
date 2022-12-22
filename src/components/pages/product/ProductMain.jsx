@@ -131,13 +131,22 @@ export default function Product( {cart, setCart, getCartTotal} ) {
                                 <div className="productDescription">
                                     <h2 className="productBodyCart__price">{product.price}₽</h2>
                                     <div className="productSelectSize">
-                                        <div className="productSelectSize__label"></div>
+                                        <div className="productSelectSize__label">Размер RU</div>
                                         <SizesSelect 
                                             ListSizes={product.sizes} 
                                             IdProduct={id}
                                             setCart={setCart}
                                             cart={cart}
                                         />
+                                    </div>
+                                    <div className="productDescription__addToCart">Добавить в корзину</div>
+                                    <div className="productDescription__extraInfo">
+                                        <div className="productExtraInfo productExtraInfo__deliveryWorldwide">Доставка по всему миру</div>
+                                        <div className="productExtraInfo productExtraInfo__refund">14 дней на возврат</div>
+                                    </div>
+                                    <div className="productDescription__structure">
+                                        <div className="productStructure__label">Описание</div>
+                                        <div className="productStructure__desc">футер трехнитка петля, 100% хлопок, плотность 340 гр</div>
                                     </div>
                                 </div>
                             </div>
