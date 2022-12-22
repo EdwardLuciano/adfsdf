@@ -12,7 +12,6 @@ export default function MobileInput({cart,setCart,getCartTotal,getTotalSum,setCh
 
     let navigate = useNavigate();
 
-
     function saveCheckoutData() {
 
         let newCD = {...checkoutData};
@@ -21,16 +20,11 @@ export default function MobileInput({cart,setCart,getCartTotal,getTotalSum,setCh
         newCD.email = email;
         newCD.phone = phone;
 
-        setCheckoutData(newCD);
-        // const data = {};
+        localStorage.setItem("checkoutData", JSON.stringify(newCD));
+        // console.log(localStorage.getItem('checkoutData')+'__PaymentInput');
+        // console.log(newCD);
 
-        // data.fio = fio;
-        // data.email = email;
-        // data.phone = phone;
-
-        console.log('tetstttt');
         setCheckoutData(newCD);
- 
 
     }
 
@@ -46,7 +40,7 @@ export default function MobileInput({cart,setCart,getCartTotal,getTotalSum,setCh
                 if ((phone.length > 5) && (phone.length < 50)) {
 
                     saveCheckoutData();
-                            navigate('/order', { replace: false });
+                    navigate('/order', { replace: false });
 
                 
                 } else {

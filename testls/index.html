@@ -25,6 +25,16 @@
 
 			form.addEventListener("submit", test, true);
 
+			let arr = [{name: 'Artamon', phone: '555'}, {name: 'Alexey', phone: '666'}];
+
+			let arrClone = [...arr];
+
+			arrClone[0].name = 'Edward';
+
+			console.log(arr);
+
+			console.log(arrClone);
+
 		</script>
 	</body>
 </html>

@@ -142,8 +142,29 @@ export default function MerchandiseList({ setCart, cart }) {
     })
   }
 
-  
-  const alert = useAlert();
+  const addToCart = (product) => {
+    let newCart = [...cart];
+    let itemInCart = newCart.find(
+      (item) => product.title === item.title
+    );
+    if (itemInCart) {
+        itemInCart.count++;
+        itemInCart.sum=itemInCart.price*itemInCart.count;
+    } else {
+      itemInCart = {
+        ...product,
+        count: 1,
+        sum: product.price,
+        size: product.sizes[0],
+      };
+      newCart.push(itemInCart);
+    }
+    console.log(itemInCart);
+    setCart(newCart);
+    
+  };
+
+
 
 
 
