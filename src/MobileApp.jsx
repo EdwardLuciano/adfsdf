@@ -8,6 +8,7 @@ import MobileEndOfPaymentMain from './mobileComponents/MobileEndOfPayment/Mobile
 import MerchPage from './mobile/MerchPage/MerchPage';
 import MobilePrivacyPolicy from './mobileComponents/MobilePrivacyPolicy/PrivacyPolicy';
 import Refund from './mobileComponents/MobileRefund/MobileRefund';
+import Product from './mobileComponents/MobileProduct/ProductMain';
 
 
 import './MobileApp.scss';
@@ -62,6 +63,7 @@ export default function MobileApp() {
             <Route path="/basket" element={<MobileBasketMain cart={cart} setCart={setCart} getCartTotal={getCartTotal} getTotalSum={getTotalSum} removeFromCart={removeFromCart} />} />
             <Route path='/privacypolicy' element={<MobilePrivacyPolicy cart={cart} setCart={setCart} getCartTotal={getCartTotal} getTotalSum={getTotalSum} removeFromCart={removeFromCart} />} />
             <Route path='/refund' element={<Refund cart={cart} setCart={setCart} getCartTotal={getCartTotal} getTotalSum={getTotalSum} removeFromCart={removeFromCart} />} />
+            <Route path="/product/:id" element={<Product cart={cart} setCart={setCart} getCartTotal={getCartTotal} />} />
 
         </Routes>
     );

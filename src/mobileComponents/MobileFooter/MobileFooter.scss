@@ -21,21 +21,27 @@
             text-align: center;
         }
     }
+
 }
 
 .mobile-footer__social {
     display: flex;
     height: fit-content;
-    justify-content: space-around;
+    justify-content: center;
 
     &-link {
         display: flex;
+        margin-left: 25px;
+
 
         &-icon {
             width: 35px;
             height: 35px;
             object-fit: contain;
         }
+    }
+    &-link:first-child {
+        margin-left: 0;
     }
 }
 .mobile-footer__policies {

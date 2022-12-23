@@ -63,8 +63,6 @@ export default function MerchandiseList({ setCart, cart }) {
       setCart(newCart);
       
  
-  
-       
       alert.show(<div className = "merchandise_alert" style={{ color: 'white', textTransform: 'none', width: '195px' }}>Товар добавлен в корзину</div>,
       {
         timeout: 1000, // custom timeout just for this one alert
@@ -93,7 +91,7 @@ export default function MerchandiseList({ setCart, cart }) {
 
         return (
             <div className="merchandise__list-item__buttons">
-                <a className="merchandise__list-item__more">Подробнее</a>
+                <Link to={'/product/'+product.id} className="merchandise__list-item__more">Подробнее</Link>
                 <a className="merchandise__list-item__buy" onClick={() => addToCart(product)}>Купить</a>
             </div>
         )
@@ -106,37 +104,12 @@ export default function MerchandiseList({ setCart, cart }) {
         )
 
 
-
-
-
-
-
     }
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
   }
   
-  const getMerch = () => {
+   const getMerch = () => {
     axios.get(apiURL)
     .then(function (response) {
       setItems(response.data.items);

@@ -1,0 +1,29 @@
+@import "../../../../../styles/variables.scss";
+
+.header-merch-info__stock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-right: 5%;
+    text-decoration: none;
+    height: fit-content;
+}
+
+.header-merch-info__stock-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 15px;
+
+    &:hover {
+        color: #F72723;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header-merch-info__stock-title {
+        display: none;
+    }
+}

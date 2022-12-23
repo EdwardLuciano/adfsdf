@@ -3,17 +3,101 @@ import axios from "axios"
 import './MobileMerchList.scss';
 import { merchandise } from '../../../constants';
 import MerchListItem from './MobileMerchListItem/MobileMerchListItem';
-
+import { useNavigate } from "react-router-dom";
+import {
+  Provider as AlertProvider,
+  useAlert,
+  positions,
+  transitions
+} from 'react-alert';
 
 export default function MerchList({ setCart, cart }) {
 
+  const alert = useAlert();
+  let navigate = useNavigate();
+
+
   const [items, setItems] = useState([]);
   const apiURL = "https://api.ramilmusic.com/merch?_format=json";
-  console.log(cart);
 
   useEffect(() => {
        getMerch();
   }, []);
+
+
+  const Button_Merch = ({product}) => {
+
+    let checkInCart = cart.find(
+        (item) => product.id === item.id
+    );
+
+    const go_to_basket = () => {
+      navigate('/basket', { replace: false });
+    }
+
+
+
+    const addToCart = (product) => {
+      let newCart = [...cart];
+      let itemInCart = newCart.find(
+        (item) => product.title === item.title
+      );
+      if (itemInCart) {
+          itemInCart.count++;
+          itemInCart.sum=itemInCart.price*itemInCart.count;
+      } else {
+        itemInCart = {
+          ...product,
+          count: 1,
+          sum: product.price,
+          size: product.sizes[0],
+        };
+        newCart.push(itemInCart);
+      }
+   
+      setCart(newCart);
+      
+ 
+      alert.show(<div className = "merchandise_alert" style={{ color: 'white', textTransform: 'none', width: '195px' }}>Товар добавлен в корзину</div>,
+      {
+        timeout: 1000, // custom timeout just for this one alert
+        type: 'success',
+      })
+    };
+    
+
+    //function contains(arr, elem) {
+    //  return arr.find((i) => i.idx == elem.idx) != -1;
+    //}
+
+    //let primer = contains(cart, product);
+    
+    // console.log('Проверка функции, которая находит продукт в массиве'); 
+    
+    // console.log(cart);
+    // console.log('Продукты');
+    // console.log(product);
+
+
+    console.log(checkInCart);
+    
+    if (!checkInCart){
+            console.log('Заходж');
+
+        return (
+                <a className="mobile-merchandise__list-item-buy" onClick={() => addToCart(product)}>Купить</a>
+        )
+    } else{
+
+        return (
+                <a className="mobile-merchandise__list-item-buy mobile-merchandise__list-item-buy_goToBasket" onClick={() => go_to_basket()}>В корзине</a>
+        )
+
+
+    }
+   
+
+  }
 
   const getMerch = () => {
     axios.get(apiURL)
@@ -55,13 +139,14 @@ export default function MerchList({ setCart, cart }) {
 
             {items.map(product => (
             <div className="mobile-merchandise__list-item">
-                <img src={"https://api.ramilmusic.com/" + JSON.parse(product.img)[0]} alt="Merchandise Item" className="mobile-merchandise__list-item-img" />
+                <img src={"https://api.ramilmusic.com/" + JSON.parse(product.img)[0]} alt="Merchandise Item" className="mobile-merchandise__list-item-img"  onClick={event => navigate('/product/'+product.id, { replace: false })}/>
                 <h2 className="mobile-merchandise__list-item-title">{product.title}</h2>
                 <div className="mobile-merchandise__list-item__price">
                     <p className="current-price">{product.price}₽</p>
                     <del className="previous-price">{product.oldprice}₽</del>
                 </div>
-                <a className="mobile-merchandise__list-item-buy" onClick={() => addToCart(product)}>Купить</a>
+                                        <Button_Merch product = {product} />
+
             </div>
             ))}
 
