@@ -2,6 +2,7 @@ import React from 'react';
 import './Grid.scss';
 import karman from '../../../assets/images/karman.png';
 import ale from '../../../assets/images/ale.png';
+import { useEffect, useState } from 'react';
 // import {
 //     FormControl,
 //     InputLabel,
@@ -138,8 +139,38 @@ function sizes(sizes, first = 0) {
           setCart(newCart);
 
   console.log(cart);
-
   };
+
+//   useEffect((product) => {
+//     minuscount(product);
+// }, []);
+
+  const minuscount = (product) => {
+    let newCart = [...cart];
+    let itemInCart = newCart.find(
+        (item) => product.title === item.title
+      );
+      if (itemInCart.count > 1) {
+        itemInCart.count--;
+        itemInCart.sum = itemInCart.sum - itemInCart.price;
+      }
+
+    setCart(newCart);
+  }
+
+
+  const pluscount = (product) => {
+    let newCart = [...cart];
+    let itemInCart = newCart.find(
+        (item) => product.title === item.title
+      );
+      if (itemInCart.count < 5) {
+        itemInCart.count++;
+        itemInCart.sum=itemInCart.price * itemInCart.count;
+      }
+
+    setCart(newCart);
+  }
 
 
 
@@ -174,8 +205,10 @@ function sizes(sizes, first = 0) {
                             <a className='grid__name__description-link' onClick={() => removeFromCart(product)}>УДАЛИТЬ ИЗ КОРЗИНЫ</a>
                         </div>
                         <div className='grid__name__count'>{product.price} ₽</div>
-                        <div className='grid__name__count'>
-                            <input className ='grid__name__quanity-input' value={product.count} />
+                        <div className='grid__name__count'>    
+                                <button className='grid__name__count__minus' onClick={() => minuscount(product)}><span className='grid__name__count__minus__minus'>-</span></button>
+                                <input className ='grid__name__quanity-input' value = {product.count} />
+                                <button className='grid__name__count__plus'  onClick={() => pluscount(product)}><span>+</span></button>
                         </div>
                         <div className='grid__name__count'>{product.sum} ₽</div>
                     </div>

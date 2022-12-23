@@ -127,6 +127,48 @@
 }
 
 
+
+.grid__name__count__minus{
+    line-height: 30px; 
+    box-sizing: border-box; 
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top: 0px;
+    border: 1px solid #d5d5d5;
+    background-color: white;
+    font-family: inherit;
+}
+
+.grid__name__count__plus{
+    line-height: 30px;
+    box-sizing: border-box; 
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    //display: flex;
+    //font-size: 35px;
+    //font-weight: 300;
+    padding: 0px 0px;
+    //margin-top: 1px;
+    margin-left: 10px;
+    border: 1px solid #d5d5d5;
+    font-family: inherit;
+}
+
+
+.grid__name__count__minus__minus{
+    position: relative;
+    top: -2px;
+}
+
+
+
 @media screen and (max-width: 1450px) {
     html {
         font-size: 12px;

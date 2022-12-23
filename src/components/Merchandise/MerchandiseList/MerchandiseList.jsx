@@ -105,12 +105,6 @@ export default function MerchandiseList({ setCart, cart }) {
             </div>
         )
 
-
-
-
-
-
-
     }
    
 
