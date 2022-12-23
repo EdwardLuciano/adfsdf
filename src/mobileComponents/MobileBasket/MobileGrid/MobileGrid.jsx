@@ -7,6 +7,34 @@ import Select from 'react-select';
 
 export default function MobileGrid({cart,setCart,removeFromCart}) {
 
+    const minuscount = (product) => {
+        let newCart = [...cart];
+        let itemInCart = newCart.find(
+            (item) => product.title === item.title
+          );
+          if (itemInCart.count > 1) {
+            itemInCart.count--;
+            itemInCart.sum = itemInCart.sum - itemInCart.price;
+          }
+    
+        setCart(newCart);
+      }
+    
+    
+      const pluscount = (product) => {
+        let newCart = [...cart];
+        let itemInCart = newCart.find(
+            (item) => product.title === item.title
+          );
+          if (itemInCart.count < 5) {
+            itemInCart.count++;
+            itemInCart.sum=itemInCart.price * itemInCart.count;
+          }
+    
+        setCart(newCart);
+      }
+    
+
     const customStyles = {
         container: (base, state) => ({
             ...base,
@@ -106,7 +134,15 @@ function sizes(sizes, first = 0) {
                                     onChange={(selectedOption) => handleChange(selectedOption, product.id)}
                                 />
                 </div>
-                <div className='mobile__description__count'>Кол-во <input className="mobile__description__inputCount" value={product.count} /></div>
+                {/* <div className='mobile__description__count'> 
+                    <p className='mobile__description__count__text'> Количество </p> 
+                </div> */}
+                <div className = 'mobile__description__count'>
+                    <button className='mobile__description__count__minus' onClick={() => minuscount(product)}><span className = 'mobile__description__count__minus__minus'>-</span></button>
+                        <input className="mobile__description__inputCount" value={product.count} />
+                    <button className='mobile__description__count__plus'  onClick={() => pluscount(product)}><span className='mobile__description__count__plus__plus'>+</span></button>
+                </div>
+                
                 <p className='mobile__description__price'> {product.sum}₽ <del className='mobile__description__previos-price'> </del></p>
             </div>
             <img src={cross} alt="Cross" className="mobile__grid__img__cross" onClick={() => removeFromCart(product)}/>

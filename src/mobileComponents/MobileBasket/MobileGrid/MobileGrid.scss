@@ -32,10 +32,15 @@
     font-weight: normal;
     font-size: 16px;
     color:#FFFFFF;
-    margin-top: 0;
+    margin-top: 23px;
     margin-bottom: 0;
     display: flex;
     align-items: center;
+
+}
+
+.mobile__description__count__text{
+    display: inline-block;
 }
 .mobile__description__size{
     font-weight: normal;
@@ -51,12 +56,14 @@
 }
 
 .mobile__description__price{
-color: white;
+    position: absolute;
+    bottom: 0px;
+    color: white;
     font-weight: bold;
     margin-top: 0;
     font-size: 16px;
-    margin-bottom: 0;
-    padding-top: 47px;
+    margin-bottom: 27px;
+    //padding-top: 27px;
 
 }
 .mobile__description__previos-price{
@@ -88,6 +95,57 @@ color: white;
     height: 240px;
     margin-right: 60px;
     object-fit: cover;
+}
+
+
+
+.mobile__description__count__minus{
+    line-height: 10px; 
+    //box-sizing: border-box; 
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 0px;
+    //padding-top: 0px;
+    //border: 1px solid #d5d5d5;
+    //background-color: white;
+    //font-family: inherit;
+}
+.mobile__description__count__plus{
+    line-height: 5px;
+    box-sizing: border-box; 
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    //display: flex;
+    //font-size: 35px;
+    //font-weight: 300;
+    //padding: 0px 0px;
+    //margin-top: 1px;
+    margin-left: 10px;
+    //border: 1px solid #d5d5d5;
+    //font-family: inherit;
+}
+
+
+.mobile__description__count__plus__plus{
+    font-size: 16px;
+    text-align: center;
+    padding: 0px, 0px;
+}
+
+
+.mobile__description__count__minus__minus{
+    font-size: 16px;
+    //font-size: 20px;
 }
 
 @media screen  and(max-width: 500px){
