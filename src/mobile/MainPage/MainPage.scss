@@ -5,3 +5,22 @@
     height: 75vh;
     width: 100%;
 }
+
+.go-to-catalog{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid white;
+    text-decoration: none;
+    margin: 0px 0px;
+    padding: 18px 24px;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 20px;
+}

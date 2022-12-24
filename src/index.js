@@ -8,6 +8,7 @@ import {BrowserRouter} from 'react-router-dom';
 import Stt from "./stt";
 import { transitions, positions, Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
+import { Lines } from 'react-preloaders';
 
 
 const options = {

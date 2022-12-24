@@ -9,6 +9,7 @@ import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import classNames from 'classnames';
 import './MainPage.scss';
 import '../../MobileApp.scss';
+import { Link } from 'react-router-dom';
 
 
 export default function MainPage({ setCart, cart, getCartTotal }) {
@@ -24,6 +25,9 @@ export default function MainPage({ setCart, cart, getCartTotal }) {
             </div>
             <Concerts />
             <Merch  cart={cart} setCart={setCart} getCartTotal={getCartTotal} />
+            <div className='link'>
+                <Link to="/merch" className="go-to-catalog">ПЕРЕЙТИ В КАТАЛОГ</Link>    
+            </div>
             <Musics />
             <About />
             <Footer />

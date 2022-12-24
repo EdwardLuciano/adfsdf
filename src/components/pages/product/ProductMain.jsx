@@ -6,6 +6,7 @@ import MerchHeader from './Header/MerchHeader';
 import ImageGallery from 'react-image-gallery';
 import withSelections from 'react-item-select';
 import { useNavigate } from "react-router-dom";
+import {Zoom} from 'react-preloaders';
 import {
   Provider as AlertProvider,
   useAlert,

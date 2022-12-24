@@ -7,11 +7,12 @@ import './MerchPage.scss';
 import '../../MobileApp.scss';
 
 
-export default function MerchPage({getCartTotal}) {
+export default function MerchPage({getCartTotal, cart, setCart}) {
     return (
         <div className="container">
             <HeaderWithStock getCartTotal={getCartTotal} />
-            <Merch />
+            <Merch cart={cart} setCart = {setCart}/>
+            
             <Pagination />
             <Footer />
         </div>

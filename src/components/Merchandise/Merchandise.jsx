@@ -5,6 +5,8 @@ import './Merchandise.scss';
 
 
 export default function Merchandise({ setCart, cart, getCartTotal }) {
+
+
     return (
         <div className="merchandise" id="merchandise">
             <MerchandiseHeader cart={cart} setCart={setCart} getCartTotal={getCartTotal} />

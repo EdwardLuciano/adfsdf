@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
+import { Link } from 'react-router-dom';
 import './MobileMerchList.scss';
 import { merchandise } from '../../../constants';
 import MerchListItem from './MobileMerchListItem/MobileMerchListItem';
@@ -11,7 +12,7 @@ import {
   transitions
 } from 'react-alert';
 
-export default function MerchList({ setCart, cart }) {
+export default function MobileMerchList({ setCart, cart }) {
 
   const alert = useAlert();
   let navigate = useNavigate();
@@ -26,6 +27,11 @@ export default function MerchList({ setCart, cart }) {
 
 
   const Button_Merch = ({product}) => {
+    
+    console.log('Мобилльное приложение')
+    console.log(product);
+    console.log(cart);
+
 
     let checkInCart = cart.find(
         (item) => product.id === item.id
@@ -38,6 +44,8 @@ export default function MerchList({ setCart, cart }) {
 
 
     const addToCart = (product) => {
+
+      console.log('Зашли в условие в побильном приложении');
       let newCart = [...cart];
       let itemInCart = newCart.find(
         (item) => product.title === item.title
@@ -64,21 +72,7 @@ export default function MerchList({ setCart, cart }) {
         type: 'success',
       })
     };
-    
-
-    //function contains(arr, elem) {
-    //  return arr.find((i) => i.idx == elem.idx) != -1;
-    //}
-
-    //let primer = contains(cart, product);
-    
-    // console.log('Проверка функции, которая находит продукт в массиве'); 
-    
-    // console.log(cart);
-    // console.log('Продукты');
-    // console.log(product);
-
-
+  
     console.log(checkInCart);
     
     if (!checkInCart){
@@ -95,8 +89,6 @@ export default function MerchList({ setCart, cart }) {
 
 
     }
-   
-
   }
 
   const getMerch = () => {
@@ -137,20 +129,25 @@ export default function MerchList({ setCart, cart }) {
         <>
         <div className="mobile-merchandise__list">
 
-            {items.map(product => (
-            <div className="mobile-merchandise__list-item">
+            {items.map((product, idx) => (
+              <div className="mobile-merchandise__list-item" key={idx}>
                 <img src={"https://api.ramilmusic.com/" + JSON.parse(product.img)[0]} alt="Merchandise Item" className="mobile-merchandise__list-item-img"  onClick={event => navigate('/product/'+product.id, { replace: false })}/>
                 <h2 className="mobile-merchandise__list-item-title">{product.title}</h2>
                 <div className="mobile-merchandise__list-item__price">
                     <p className="current-price">{product.price}₽</p>
                     <del className="previous-price">{product.oldprice}₽</del>
-                </div>
-                                        <Button_Merch product = {product} />
 
-            </div>
+                    {/* <Button_Merch product = {product} /> */}
+                </div>
+
+                 <Button_Merch product = {product} /> 
+
+              </div>
             ))}
 
+            
         </div>
+           
         </>
     );
 }

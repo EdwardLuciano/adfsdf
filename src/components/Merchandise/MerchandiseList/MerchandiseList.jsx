@@ -32,6 +32,10 @@ export default function MerchandiseList({ setCart, cart }) {
 
   const Button_Merch = ({product}) => {
 
+
+    //console.log('Мы выводим из не мобилки карты');
+    //console.log(cart);
+
     let checkInCart = cart.find(
         (item) => product.id === item.id
     );
