@@ -21,7 +21,7 @@ export default function Main({ setCart, cart, getCartTotal }) {
             <Musics />
             <About />
             <Footer />
-            <ScrollToTop getCartTotal={getCartTotal} />
+            <ScrollToTop cart={cart} setCart={setCart} getCartTotal={getCartTotal}  />
         </div>
 
     );
