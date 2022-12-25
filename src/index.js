@@ -25,20 +25,25 @@ ReactDOM.render(
     <BrowserRouter>
       {window.screen.width < 640 && window.location.pathname != '/tour2022' ? (
         <>
+        
          <AlertProvider template={AlertTemplate} {...options}>
         <Stt />
 
         <MobileApp />
         </AlertProvider>
+    
         </>
 
       ) : (
              <>
+            
              <AlertProvider template={AlertTemplate} {...options}>
               <Stt />
-
-        <App />
-        </AlertProvider>
+              
+                <App />
+              
+              </AlertProvider>
+              
         </>
       )}
     </BrowserRouter>

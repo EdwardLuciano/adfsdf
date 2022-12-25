@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 // } from '@mui/material';
 // import { makeStyles } from '@mui/styles';
 import Select from 'react-select';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -24,7 +25,10 @@ import Select from 'react-select';
 //     },
 // });
 
+
 export default function Grid({cart,setCart,removeFromCart}) {
+
+  let navigate = useNavigate();
     const customStyles = {
         container: (base, state) => ({
             ...base,
@@ -172,7 +176,24 @@ function sizes(sizes, first = 0) {
     setCart(newCart);
   }
 
+  const go_to_main_page = () => {
+    navigate('/', { replace: false });
+  }
 
+  // const removeFromCart_clear = (productToRemove) => {
+  //   console.log('Выводим переход на баскет');
+  //   console.log(cart);
+  //   setCart(
+  //     cart.filter((product) => product !== productToRemove)
+  //   );
+  //   console.log(cart);
+  //     if (productToRemove.count == 0){
+  //       go_to_main_page();
+  //     }
+  //     // console.log('Выводим переход на баскет');
+  //     // console.log(productToRemove);
+  //     // console.log(productToRemove.count);
+  // }
 
     return (
         <div className="table_grid__container">

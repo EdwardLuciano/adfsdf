@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import Main from './components/pages/main/Main';
 import Merchandise from './components/pages/merch/MerchMain';
 import Payment from './components/Payment/PaymentMain'
@@ -11,11 +12,15 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Refund from './components/Refund/Refund';
 import Password from './components/pages/password/password';
 import Product from './components/pages/product/ProductMain';
+//import { useRouter } from 'next/router'
+ 
 
 import {
   Routes,
   Route
 } from 'react-router-dom';
+
+import { useEventCallback } from '@mui/material';
 
 
   const cartFromLocalStorage = (JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : [])// "[]"
@@ -42,6 +47,7 @@ function App() {
     localStorage.setItem("stageCheckout", stageCheckout);
   }, [stageCheckout]);
 
+  let navigate = useNavigate();
 
 
   const getCartTotal = () => {
@@ -62,6 +68,11 @@ function App() {
     setCart(
       cart.filter((product) => product !== productToRemove)
     );
+    console.log(window.location.pathname);
+    console.log(cart.length);
+    if (window.location.pathname == "/basket" && cart.length == 1){
+      navigate('/', { replace: false });
+    }
   };
 
   return (
