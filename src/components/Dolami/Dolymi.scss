@@ -1,0 +1,116 @@
+
+.dolymi__main{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    //position: absolute;
+}
+
+.dolymi__main__text{
+    color: black;
+    font-family: 'Factor A';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.dolymi__main__text_cursiv{
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Factor A';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.dolymi__main__info{
+    display: block;
+    //flex-direction: column;
+    //align-items: flex-start;
+    //justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 0px;
+    width: 90%;
+}
+
+.dolymi__main__payment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.dolymi__main__payment_bez_proc{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.dolymi__main__payment_card{
+    display: inline-flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dolymi__main__payment_bez_proc_text{
+    font-family: 'Factor A';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.dolymi__main__payment_card_text{
+    font-family: 'Factor A';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.dolymi__main_doly{
+    background: #F6F7F8;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0x;
+    
+    
+}
+.dolymi__main_doly__info{
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between
+}
+
+
+.dolymi__main_doly_info_prokr{
+    height: 5px;
+    width: 100%;
+    background: #428BF9;
+    border-radius: 5px;
+}
+
+
+.dolymi__main_doly_block{
+    margin-left: 10px;
+}
+
+.dolymi__main_doly__info_text{
+    font-family: 'Factor A';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
