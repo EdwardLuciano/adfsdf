@@ -1,38 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
 import './Dolymi.scss';
 import vector from '../../assets/images/Vector.png';
-import Modal from './Modal.js';
 
-export default function DolymiMain(){
-
-    const [show, setShow] = useState(false);
-
-    const openModal = () => setShow(true);
-    const closeModal = () => setShow(false);
-
-
-    // const Modal  =({
-    //     title, isOpen, onCancel, onSubmit
-    // }) => {
-    //     return(
-
-    //     )
-    // }
-
-    
-
-
-    return(
-        
-        <div className='div__main'>
-        {!show && <button onClick={openModal}>Show modal</button>}<div></div>
-        <Modal closeModal={closeModal} show={show} />
-        </div>
-    );
-
-}
-
-{/* <div className='dolymi__main'> 
+function Modal(props) {
+    const { show, closeModal } = props;
+  
+    return (
+      
+        <div className={show ? "modal" : "hide"}>
+          <button onClick={closeModal}>X</button>
+          <div className='dolymi__main'> 
             <div className='dolymi__main_header'></div>
 
             <div className='dolymi__main__info'>
@@ -57,29 +34,37 @@ export default function DolymiMain(){
 
                     <div className='dolymi__main_doly_block'>
                         <p className='dolymi__main_doly__info_text'>Оплата сегодня</p>
-                        <p>2050 Р</p>
+                        <p>2040 Р</p>
                         <div className='dolymi__main_doly_info_prokr'></div>
                     </div>
                     
                     <div className='dolymi__main_doly_block'>
-                        <p className='dolymi__main_doly__info_text'>Оплата сегодня</p>
-                        <p>2050 Р</p>
+                        <p className='dolymi__main_doly__info_text'>Через 2 недели</p>
+                        <p>2040 Р</p>
                         <div className='dolymi__main_doly_info_prokr'></div>
                     </div>
                     <div className='dolymi__main_doly_block'>
-                        <p className='dolymi__main_doly__info_text'>Оплата сегодня</p>
-                        <p>2050 Р</p>
+                        <p className='dolymi__main_doly__info_text'>Через 4 недели</p>
+                        <p>2040 Р</p>
                         <div className='dolymi__main_doly_info_prokr'></div>
                     </div>
                     <div className='dolymi__main_doly_block'>
-                        <p className='dolymi__main_doly__info_text'>Оплата сегодня</p>
-                        <p>2050 Р</p>
+                        <p className='dolymi__main_doly__info_text'>Через 6 недель</p>
+                        <p>2040 Р</p>
                         <div className='dolymi__main_doly_info_prokr'></div>
                     </div>
-                    
-
-
                 </div>
             </div>
 
-        </div> */}
+            <div className="dolymi__main__footer">
+                <p className = "dolymi__main__footer__text">Подробнее о сервисе можно узнать на <span className = "dolymi__main__footer__text__link" >dolyame.ru</span></p>
+            </div>        
+        
+        </div>
+
+        </div>
+      
+    );
+  }
+  
+  export default Modal;
