@@ -7,6 +7,7 @@ import About from '../../../components/About/About';
 import Footer from '../../../components/Footer/Footer';
 import '../../../App.scss';
 import ScrollToTop from '../../ScrollToTop/ScrollToTop';
+import Integration from '../../Integration/Integration';
 
 
 export default function Main({ setCart, cart, getCartTotal }) {
@@ -20,6 +21,7 @@ export default function Main({ setCart, cart, getCartTotal }) {
             <Merchandise cart={cart} setCart={setCart} getCartTotal={getCartTotal} />
             <Musics />
             <About />
+            <Integration/>
             <Footer />
             <ScrollToTop cart={cart} setCart={setCart} getCartTotal={getCartTotal}  />
         </div>

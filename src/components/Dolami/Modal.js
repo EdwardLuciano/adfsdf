@@ -1,6 +1,7 @@
 import React from "react";
 import './Dolymi.scss';
 import vector from '../../assets/images/Vector.png';
+import dolymi from'../../assets/images/Branding badge.svg';
 
 function Modal(props) {
     const { show, closeModal } = props;
@@ -8,9 +9,15 @@ function Modal(props) {
     return (
       
         <div className={show ? "modal" : "hide"}>
-          <button onClick={closeModal}>X</button>
+    
+
           <div className='dolymi__main'> 
-            <div className='dolymi__main_header'></div>
+            <button className='dolymi_close' onClick = {closeModal}>X</button>
+            
+
+            <div className='dolymi__main_header'>
+            <img className='dolymi__main_header__img' src = {dolymi} alt="" />
+            </div>
 
             <div className='dolymi__main__info'>
                 <p className='dolymi__main__text'>Оплатите 25% от стоимости покупки</p>
@@ -57,7 +64,7 @@ function Modal(props) {
             </div>
 
             <div className="dolymi__main__footer">
-                <p className = "dolymi__main__footer__text">Подробнее о сервисе можно узнать на <span className = "dolymi__main__footer__text__link" >dolyame.ru</span></p>
+                <p className = "dolymi__main__footer__text">Подробнее о сервисе можно узнать на <a className = "dolymi__main__footer__text__link" href="">dolyame.ru</a></p>
             </div>        
         
         </div>
